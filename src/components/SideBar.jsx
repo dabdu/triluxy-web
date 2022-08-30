@@ -46,7 +46,7 @@ function SideBar() {
         <div className="">
           <SideBarItem
             text={"Manage Bookings"}
-            onClick={() => navigate("manage-bookings")}
+            onClick={() => navigate("/bookings")}
           />
           <SideBarItem
             text={"Manage Hotels"}

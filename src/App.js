@@ -15,6 +15,13 @@ import {
   ManageRooms,
 } from "./pages/hotels";
 import HotelContextProvider from "./Context/HotelContext";
+import {
+  Booked,
+  CheckedIn,
+  CheckedOut,
+  ConfirmBooking,
+  Confirmed,
+} from "./pages/hotels/reservations";
 function App() {
   return (
     <>
@@ -33,9 +40,18 @@ function App() {
               <Route path="/hotel/:id/add-room" element={<AddRoom />} />
 
               {/* Admin Routes */}
-              <Route path="/manage-bookings" element={<ManageCategory />} />
+              {/* <Route path="/manage-bookings" element={<ManageCategory />} /> */}
               <Route path="/manage-hotels" element={<ManageHotels />} />
               <Route path="/add-hotel" element={<AddHotel />} />
+              {/* Reservations Routes */}
+              <Route path="/bookings" element={<Booked />} />
+              <Route path="/bookings/confirmed" element={<Confirmed />} />
+              <Route path="/bookings/checked-in" element={<CheckedIn />} />
+              <Route path="/bookings/checked-out" element={<CheckedOut />} />
+              <Route
+                path="/bookings/confirm-booking/:id"
+                element={<ConfirmBooking />}
+              />
             </Routes>
           </div>
         </Router>
